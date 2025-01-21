@@ -1684,6 +1684,22 @@ ul li.morado-circle::marker {
     .cookie-popup button {
         margin: 10px;
     }
+    .titulo-sobre-club {
+        font-size: 40px;
+    }
+    .bg-light-blue {
+        font-size: 20px;
+        margin: 10px 20px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        padding: 25px 25px;
+    }
+
+    .leyenda-club{
+        color: #fff;
+        margin: 25px 15px;
+        font-size: 9px;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {

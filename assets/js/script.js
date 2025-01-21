@@ -22,9 +22,6 @@ function toggleAccordion(header) {
     }
 }
 
-//---- Configuración del carousel------*/
-
-
 //------- Selecciona todos los enlaces del menú-------------*/
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".nav-link"); 

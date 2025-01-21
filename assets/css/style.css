@@ -1235,6 +1235,7 @@ span.pregunta {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-transform: uppercase;
 }
 
 .modal-content input {
@@ -1674,6 +1675,15 @@ ul li.morado-circle::marker {
         left: 0;
         top: 0;
     }
+    .cookie-popup {
+        left: 0px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    .cookie-popup button {
+        margin: 10px;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1731,6 +1741,13 @@ ul li.morado-circle::marker {
     }
     .carousel-item .content {
         padding: 0 1rem;
+    }
+    .txt-slide-exoron {
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        left: 0;
+        top: 232px;
     }
 }
 

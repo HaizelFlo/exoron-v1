@@ -198,20 +198,28 @@
                 <div class="col-12 mb-4">
                     <img src="assets/images/logo-video.webp" class="img-fluid video-img">
                 </div>
+                <!-- portada para tablet -->
+                <div class="d-block d-none d-md-block d-lg-none d-lg-none d-xl-none">
+                    <img src="assets/images/portada_podcast_tablet.png" class="img-fluid m-auto w-100" alt="Preguntas frecuentes">
+                </div>
+                <!-- portada para movil -->
+                <div class="d-block d-sm-block d-md-none d-lg-none d-sm-none">
+                    <img src="assets/images/portada_podcast_movil.png" class="img-fluid m-auto w-100" alt="Preguntas frecuentes">
+                </div>
             </div>
     
             <!-- Tarjetas de episodios -->
-            <div class="contenedor-general">
+            <div class="contenedor-general mt-portada">
                 <div class="row">
                     <h1 class="titulo-episodios">EPISODIOS</h1>
-                    <hr>
+                    <hr style="margin-bottom: 75px;">
                     <!-- Tarjeta 1 -->
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card-img" style="background-image: url('assets/images/episodio-1.webp');"></div>
                         <div class="card card-episodio">
                             <div class="card-body">
                                 <div class="contenedor-info">
-                                    <p class="episodio-info">15 43 min</p>
+                                    <p class="episodio-info">16 min</p>
                                 </div>
                                 <p class="descripcion-episodio"><span class="title-blue">Episodio 1</span><br>
                                     Cinco trucos para potenciar la erección de tu pareja</p>
@@ -235,8 +243,8 @@
                                     <div id="videoModal" class="video-modal" style="display: none;">
                                         <div class="video-modal-content">
                                             <span class="close-modal-vid" onclick="closeVideoPopup()">X</span>
-                                            <video width="auto" height="550" controls loop muted>
-                                                <source src="https://bespokeadvertising.com.mx/exoron/videos/10370_M8_Club Eroxon_Edición videopodcast_1_v4.mp4" type="video/mp4">
+                                            <video width="auto" height="550" controls loop muted class="tamanio-video">
+                                                <source src="https://bespokeadvertising.com.mx/exoron/videos/10370_M8_Club%20Eroxon_Edici%C3%B3n%20videopodcast_1_v6.mp4" type="video/mp4">
                                                 Tu navegador no soporta la reproducción de video.
                                             </video>
                                         </div>

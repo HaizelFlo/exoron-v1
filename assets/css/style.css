@@ -750,10 +750,10 @@ form .form-control-m {
     display: inline-block;
     color: #FFF;
     text-align: center;
-    font-family: BaseOne;
+    font-family: 'Montserrat';
     font-size: 42px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
 }
@@ -1750,6 +1750,25 @@ ul li.morado-circle::marker {
     .mt-portada{
         margin-top: -163px;
     }
+    .tamanio-video{
+        width: 100%;
+        height: auto;
+    }
+    span.close-modal-vid {
+        top: -50px;
+    }
+    .titulo-episodios::after {
+        width: 257px;
+        left: 30%;
+        margin: auto;
+    }
+    .titulo-episodios {
+        margin-top: 124px;
+        margin-bottom: -26px;
+    }
+    hr{
+        color: transparent;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1829,6 +1848,26 @@ ul li.morado-circle::marker {
     }
     .mt-portada{
         margin-top: -300px;
+    }
+    .tamanio-video{
+        width: 100%;
+        height: auto;
+    }
+    span.close-modal-vid {
+        top: -50px;
+    }
+    .titulo-episodios::after {
+        width: 512px;
+        left: 21%;
+        margin: auto;
+    }
+    .titulo-episodios {
+        margin-top: 220px;
+        margin-bottom: -1%;
+        font-size: 84px;
+    }
+    hr{
+        color: transparent;
     }
 }
 

@@ -820,8 +820,14 @@ form .form-control-m {
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 10px;
-    background: #902F7F;
     transition: border-radius 0.3s ease-in-out;
+}
+
+.accordion-color-impar{
+    background: #902F7F;
+}
+.accordion-color-par{
+    background: #00ADEE;
 }
 
 .accordion-header.active {
@@ -1733,6 +1739,17 @@ ul li.morado-circle::marker {
         width: 30px;
         height: 30px;
     }
+    .video {
+        background-position: left;
+    }
+    .video-img {
+        width: auto;
+        padding: 0 25px 0 25px;
+        margin: 20px 0px -27px 0px;
+    }
+    .mt-portada{
+        margin-top: -163px;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1801,6 +1818,17 @@ ul li.morado-circle::marker {
     .scroll-tarjetas {
         padding-left: 40px;
         margin: 15% 4%;
+    }
+    .video {
+        background-position: left;
+    }
+    .video-img {
+        width: auto;
+        padding: 0 110px 0 110px ; 
+        margin: 20px 0px -27px 0px;
+    }
+    .mt-portada{
+        margin-top: -300px;
     }
 }
 

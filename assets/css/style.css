@@ -1660,7 +1660,7 @@ ul li.morado-circle::marker {
         left: 0;
         margin: 0;
         gap: 15px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     .carousel-item .content {
         padding: 0 0rem;
@@ -1838,6 +1838,14 @@ ul li.morado-circle::marker {
         font-size: 12px;
         margin: 20px 0%;
     }
+    .mensaje-final-cuatro h2{
+        font-size: 28px;
+        width: auto;
+        margin: 28px 0px;
+    }
+    .texto-largo-cuatro p{
+        text-align: center;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1963,6 +1971,9 @@ ul li.morado-circle::marker {
         width: 100%;
         font-size: 32px;
         margin: 20px 0%;
+    }
+    .texto-largo-cuatro p{
+        text-align: center;
     }
 }
 

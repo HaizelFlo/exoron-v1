@@ -163,6 +163,7 @@ a.nav-link {
     flex-direction: column;
     left: auto;
     margin: 0;
+
 }
 
 .custom-indicators button {
@@ -227,6 +228,7 @@ a.nav-link {
     font-size: 12px;
     padding: 15px 40px;
     border-top: 1px solid #FFF;
+    margin-top: 40px;
 }
 
 .footer-container {
@@ -426,12 +428,12 @@ a.nav-link {
 .descripcion-2{
     color: #00ADEE;
     font-family: Montserrat;
-    font-size: 11px;
+    /* font-size: 11px; */
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    width: 365px;
-    margin-bottom: 30%;
+    /* width: 365px; */
+    margin-top: 5%;
 }
 
 /* Formulario */
@@ -821,14 +823,17 @@ form .form-control-m {
     transition: background-color 0.3s ease;
     border-radius: 10px;
     transition: border-radius 0.3s ease-in-out;
+    border: 2px solid #00ADEE;
+    background-color: #000;
+        
 }
 
-.accordion-color-impar{
+/* .accordion-color-impar{
     background: #902F7F;
 }
 .accordion-color-par{
     background: #00ADEE;
-}
+} */
 
 .accordion-header.active {
     border-radius: 10px 10px 0 0; 
@@ -850,7 +855,7 @@ form .form-control-m {
 .accordion-header.active {
     background-color: #0D132E; /* Azul oscuro al activarse */
     color: #00ADEE; /* Azul claro para el texto */
-    border-bottom: 3px solid #902F7F; /* Línea morada */
+    border-bottom: 3px solid #00ADEE; /* Línea morada */
 }
 
 .accordion-content {
@@ -1233,6 +1238,63 @@ span.pregunta {
     box-shadow: 4px 6px 2px #000000a1;
 }
 
+.news-home {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background: #0D132E;
+    color: #fff;
+    box-shadow: 4px 6px 2px #000000a1;
+    height: 200px;
+    text-align: start;
+    display: grid;
+    align-items: center;
+}
+.news-home h3{
+    margin-bottom: 10px;
+    color: #00ADEE;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.news-home p{
+    font-size: 19px;
+    padding-bottom: 15px;
+}
+
+.news-home input {
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #0D132E;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.news-home button {
+    background: #22A6DE;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer !important;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 .modal-content h3 {
     margin-bottom: 10px;
     color: #00ADEE;
@@ -1257,6 +1319,11 @@ span.pregunta {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+input:focus-visible {
+    outline: 4px solid transparent;
+    outline-offset: 0;
 }
 
 .modal-content button {
@@ -1660,7 +1727,7 @@ ul li.morado-circle::marker {
         left: 0;
         margin: 0;
         gap: 15px;
-        /* margin-top: 50px; */
+        /* transform: rotate(90deg); */
     }
     .carousel-item .content {
         padding: 0 0rem;
@@ -1845,6 +1912,20 @@ ul li.morado-circle::marker {
     }
     .texto-largo-cuatro p{
         text-align: center;
+    }
+    .news-home{
+        height: auto;
+    }
+    .news-home h3{
+        font-size: 22px;
+        text-align: center;
+    }
+    .news-home p{
+        font-size: 17px;
+    }
+    .news-home input{
+        width: 100%;
+        margin-bottom: 15px;
     }
  }
 

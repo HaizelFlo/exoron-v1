@@ -30,13 +30,10 @@
                 <a class="navbar-brand" href="#">
                     <img src="assets/images/LOGOCLUB.webp" alt="Logo" height="auto">
                 </a>
-                <button class="navbar-toggler" type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-start" style="background-color: #030823;" id="navbarNav">
-                    <!-- boton close -->
                     <div class="offcanvas-header" data-bs-theme="dark">
                         <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
                     </div>
@@ -122,7 +119,7 @@
                                         </defs>
                                     </svg>                                        
                                 </div>
-                                <span class="me-3 text-white">Pregúntale a un experto</span>
+                                <span class="me-3 text-white">Historias eroxon®</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -200,7 +197,7 @@
     <!-- Slider -->
 <section class="slider">
     <div class="container-fluid">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="carouselExampleIndicators" class="carousel slide"  >
             <!-- Indicadores Verticales -->
             <div class="carousel-indicators custom-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
@@ -213,8 +210,8 @@
             <div class="carousel-inner">
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
-                    <img src="assets/images/hombres-home-eroxon.webp" class="d-block d-none d-lg-block d-md-none d-sm-block" alt="Confianza">
-                    <img src="assets/images/bg_tablet.png" class="d-block d-none d-md-block d-lg-none d-lg-none d-xl-none" alt="Confianza">
+                    <!-- <img src="assets/images/hombres-home-eroxon.webp" class="d-block d-none d-lg-block d-md-none d-sm-block" alt="Confianza">
+                    <img src="assets/images/bg_tablet.png" class="d-block d-none d-md-block d-lg-none d-lg-none d-xl-none " alt="Confianza">
                     <img src="assets/images/bg_movil_2.png" class="d-block d-sm-block d-md-none d-lg-none d-sm-none" alt="Confianza">
 
                     <p class="leyenda d-block d-none d-md-none d-sm-block"><b>Consulte a su médico.</b><br>
@@ -231,7 +228,48 @@
                     <p class="leyenda dos d-block d-md-block d-sm-none"><b>Consulte a su médico.</b><br>
                         Eroxon® es un dispositivo médico (No. Reg. 1887C2023 SSA)<br>
                         Permiso de publicidad No.243300201B3690
-                    </p>
+                    </p> -->
+
+                    <div class="container mb-5">
+                          <div class="d-lg-flex justify-content-center align-items-center gap-3">
+                            <div class="col text-white">
+                                <p>
+                                    Club eroxon® es un espacio exclusivo para ti, donde tus preguntas sobre la salud sexual tienen respuesta.
+                                </p>
+                                <p>
+                                    En Club eroxon®, la salud sexual masculina es nuestra prioridad. Aquí encontrarás información y asesoría de expertos para mejorar tu salud sexual y acercarte con confianza a temas como la disfunción eréctil.
+                                </p>
+                                <p class="descripcion-2">Evaluaremos tu pregunta y la respuesta estará alineada a nuestra política de términos y condiciones.</p>
+                                <p class="descripcion-2">Las respuestas serán contadas para dar respuesta a las que mas se repitan.</p>
+                              </div>
+                              <div class="col">
+                                <!-- Formulario -->
+                                <h2 class="titulo-formulario mt-4">ENVÍANOS TUS PREGUNTAS</h2>
+                                <form id="faqForm" action="enviar_correo.php" method="POST">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <input type="text" name="nombreAlias" id="nombreAlias" class="form-control" placeholder="Nombre o alias"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="edad" id="edad" class="form-control" placeholder="Edad" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea name="mensaje" id="mensaje" class="form-control-m" rows="4" placeholder="Tu pregunta"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-enviar">Enviar</button>
+                                    <p id="confirmationMessage" class="comment" style="display:none;">Pregunta publicada, espera nuestra respuesta
+                                        pronto.</p>
+                                </form>
+                              </div>
+                          </div>
+                      </div>
+
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-item">
@@ -312,6 +350,35 @@
     </div>
 </section>
 
+<section>
+    <div class="container-fluid news-home">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6 col-12">
+                <div style=" margin: auto; padding-left: 40px;">
+                    <div class="card-body">
+                        <h3>¡Suscríbete a nuestro Newsletter!</h3>
+                      <p class="card-text text-center">Recibe actualizaciones y contenido exclusivo directamente en tu correo.</p>
+                    </div>
+                    <!-- <div class="d-flex align-items-center gap-3">
+                        <input type="email" name="email" id="email" placeholder="Tu correo electrónico">
+                        <button type="button" style="height: 40px;">Suscribirse</button>
+                    </div> -->
+                  </div>
+            </div>
+            <div class="col-lg-6 col-12" id="subscribeModalNews">
+                <form class="suscription">
+                    <div class="d-md-flex align-items-center gap-3">
+                        <input type="email" id="emailInputNews" placeholder="Tu correo electrónico">
+                        <button type="submit">Suscribirse</button>
+                    </div>
+                </form>
+                <div id="errorMessageNews" style="color: red; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
+                <div id="successMessageNews" style="color: #00ADEE; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="custom-footer">
     <div class="footer-container">
@@ -365,7 +432,8 @@
         <p>Recibe actualizaciones y contenido exclusivo directamente en tu correo.</p>
         <form class="suscription">
             <input type="email" id="emailInput" placeholder="Tu correo electrónico" required>
-            <div id="errorMessage" style="color: red; font-size: 0.9rem; margin-top: 5px;"></div>
+            <div id="errorMessage" style="color: red; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
+            <div id="successMessage" style="color: #00ADEE; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
             <button type="submit">Suscribirse</button>
         </form>
     </div>
@@ -399,37 +467,97 @@
         });
     }
 
-    // Función para manejar el pop-up de suscripción
-    function handleSubscriptionPopup() {
-        const subscriptionPopup = localStorage.getItem("subscriptionPopup");
-        const subscribeModal = document.getElementById("subscribeModal");
+        // Función para manejar el pop-up de suscripción
+        function handleSubscriptionPopup() {
+            const subscriptionPopup = localStorage.getItem("subscriptionPopup");
+            const subscribeModal = document.getElementById("subscribeModal");
 
-        if (!subscriptionPopup) {
-            setTimeout(() => {
-                subscribeModal.style.display = "flex";
-            }, 2000);
+            if (!subscriptionPopup) {
+                setTimeout(() => {
+                    subscribeModal.style.display = "flex";
+                }, 2000);
 
-            // Registrar el clic en el botón de cerrar
-            const closeButton = document.getElementById("closeModal");
-            if (closeButton) {
-                closeButton.addEventListener("click", function () {
+                // Registrar el clic en el botón de cerrar
+                const closeButton = document.getElementById("closeModal");
+                if (closeButton) {
+                    closeButton.addEventListener("click", function () {
+                        subscribeModal.style.display = "none";
+                        localStorage.setItem("subscriptionPopup", "closed"); // Marcar como cerrado
+                    });
+                }
+
+                // Registrar el envío del formulario
+                const form = document.querySelector("#subscribeModal form");
+                if (form) {
+                    form.addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        const emailInput = document.getElementById("emailInput");
+                        const errorMessage = document.getElementById("errorMessage");
+                        const successMessage = document.getElementById("successMessage");
+                        const email = emailInput.value.trim();
+
+                        errorMessage.textContent = "";
+                        successMessage.textContent = "";
+
+                        if (!email || !validateEmail(email)) {
+                            errorMessage.textContent = "Por favor, ingresa un correo válido.";
+                            return;
+                        }
+
+                        const formData = new FormData();
+                        formData.append("correo", email);
+
+                        fetch("guardar_suscripcion.php", {
+                            method: "POST",
+                            body: formData,
+                        })
+                            .then((response) => {
+                                if (!response.ok) {
+                                    throw new Error("Error en la respuesta del servidor");
+                                }
+                                return response.json();
+                            })
+                            .then((data) => {
+                                if (data.status === "success") {
+                                    console.log("Éxito:", data.message);
+                                    successMessage.textContent = "Éxito: " + data.message;
+                                    emailInput.value = '';
+                                } else {
+                                    console.error("Error:", data.message);
+                                    errorMessage.textContent = "Error: " + data.message;
+                                }
+                            })
+                            .catch((error) => {
+                                console.error("Error de red:", error);
+                                errorMessage.textContent = "Error: " + error;
+                            });
+                    });
+
+                }
+            } else {
+                if (subscribeModal) {
                     subscribeModal.style.display = "none";
-                    localStorage.setItem("subscriptionPopup", "closed"); // Marcar como cerrado
-                });
+                }
             }
+        }
+
+        // Función para suscripción
+        function handleSubscriptionNews() {
 
             // Registrar el envío del formulario
-            const form = document.querySelector("#subscribeModal form");
+            const form = document.querySelector("#subscribeModalNews form");
             if (form) {
                 form.addEventListener("submit", function (e) {
                     e.preventDefault();
 
-                    const emailInput = document.getElementById("emailInput");
-                    const errorMessage = document.getElementById("errorMessage");
+                    const emailInput = document.getElementById("emailInputNews");
+                    const errorMessage = document.getElementById("errorMessageNews");
+                    const successMessage = document.getElementById("successMessageNews");
                     const email = emailInput.value.trim();
 
-                    // Limpiar mensaje de error previo
                     errorMessage.textContent = "";
+                    successMessage.textContent = "";
 
                     if (!email || !validateEmail(email)) {
                         errorMessage.textContent = "Por favor, ingresa un correo válido.";
@@ -443,39 +571,32 @@
                         method: "POST",
                         body: formData,
                     })
-                        .then((response) => response.json())
+                        .then((response) => {
+                            if (!response.ok) {
+                                throw new Error("Error en la respuesta del servidor");
+                            }
+                            return response.json();
+                        })
                         .then((data) => {
                             if (data.status === "success") {
-                                const modalContent = subscribeModal.querySelector(".modal-content");
-                                modalContent.innerHTML = `
-                                    <h3>¡Gracias por suscribirte!</h3>
-                                    <p>Recibirás nuestras noticias en tu correo.</p>
-                                    <button class="close-modal-btn">Cerrar</button>
-                                `;
-
-                                const closeModalBtn = modalContent.querySelector(".close-modal-btn");
-                                closeModalBtn.addEventListener("click", () => {
-                                    subscribeModal.style.display = "none";
-                                    localStorage.setItem("subscriptionPopup", "subscribed"); // Marcar como suscrito
-                                });
-                            } else if (data.status === "error" && data.message === "El correo ya está registrado.") {
-                                errorMessage.textContent = "El correo ya está registrado.";
+                                console.log("Éxito:", data.message);
+                                successMessage.textContent = "Éxito: " + data.message;
+                                emailInput.value = '';
                             } else {
-                                errorMessage.textContent = "Hubo un error al procesar tu solicitud.";
+                                console.error("Error:", data.message);
+                                errorMessage.textContent = "Error: " + data.message;
                             }
                         })
                         .catch((error) => {
-                            console.error("Error al guardar el correo:", error);
-                            errorMessage.textContent = "Hubo un problema al procesar tu solicitud.";
+                            console.error("Error de red:", error);
+                            errorMessage.textContent = "Error: " + error;
                         });
                 });
+
             }
-        } else {
-            if (subscribeModal) {
-                subscribeModal.style.display = "none";
-            }
+
         }
-    }
+
 
     // Función para validar correos electrónicos
     function validateEmail(email) {
@@ -486,6 +607,7 @@
     // Ejecutar las funciones
     handleCookiesPopup();
     handleSubscriptionPopup();
+    handleSubscriptionNews();
 });
 </script>
 

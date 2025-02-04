@@ -422,7 +422,6 @@ a.nav-link {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    width: 360px;
 }
 
 .descripcion-2{
@@ -485,6 +484,7 @@ form .btn-enviar:hover {
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 255px;
+    height: 453px;
 }
 
 .card-experto img {
@@ -514,9 +514,10 @@ form .btn-enviar:hover {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: right;
+    /* text-align: right; */
     float: right;
-    margin: -19px 0px 15px 0;
+    /* margin: -19px 0px 15px 0; */
+    margin-bottom: 6px;
 }
 
 .btn-leer:hover {
@@ -532,7 +533,7 @@ em {
     line-height: normal;
     text-transform: uppercase;
     float: right;
-    margin-right: 52%;
+    margin-right: 32%;
 }
 
 /* Contenedor para el SVG */
@@ -550,8 +551,8 @@ em {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
     background-color: rgba(0, 173, 238, 0.5); /* Color azul semitransparente */
     animation: ripple 1.5s infinite ease-out;
@@ -628,7 +629,8 @@ form .form-control-m {
 
 .subtitulo {
     font-style: italic;
-    color: #00ADEE; 
+    color: #00ADEE;
+    text-align: center;
 }
 
 .subtitulo-episodios {
@@ -855,7 +857,11 @@ form .form-control-m {
 .accordion-header.active {
     background-color: #0D132E; /* Azul oscuro al activarse */
     color: #00ADEE; /* Azul claro para el texto */
-    border-bottom: 3px solid #00ADEE; /* Línea morada */
+    border-bottom: 3px solid #902F7F; /* Línea morada */
+
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
 }
 
 .accordion-content {
@@ -918,6 +924,7 @@ form .form-control-m {
 .pregunta-experto {
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
+    width: auto;
 }
 
 .header-img {
@@ -1654,6 +1661,25 @@ ul li.morado-circle::marker {
     line-height: normal;
 }
 
+.flex-none{
+    flex-grow: revert !important;
+}
+
+.mensaje-success{
+    margin-top: 5px;
+}
+.cards-historias{
+    margin: auto;
+    column-gap: 1px;
+    row-gap: 40px;
+}
+.hola{
+    display: flex;
+    align-items: end;
+    background-color: #003B75;
+    width: auto;
+}
+
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 575px) {
     .footer-container {
@@ -1791,19 +1817,20 @@ ul li.morado-circle::marker {
     }
     .card-experto {
         width: 100%;
-        height: 515px;
+        height: 535px;
     }
     .card-experto .contenido {
         font-size: 18px;
     }
     .btn-leer {
         font-size: 18px;
-        margin-top: -26px;
+        margin-top: -33px;
     }
     .animated-container {
-        margin-left: 180px;
-        width: 30px;
-        height: 30px;
+        margin-left: 264px;
+        margin-top: 50px;
+        width: 50px;
+        height: 50px;
     }
     .video {
         background-position: left;
@@ -1927,6 +1954,12 @@ ul li.morado-circle::marker {
         width: 100%;
         margin-bottom: 15px;
     }
+    .video-modal-content{
+        width: 100%;
+    }
+    .mensaje-success{
+        margin-top: 20px;
+    }
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1953,7 +1986,7 @@ ul li.morado-circle::marker {
     }
     .custom-indicators {
         position: absolute;
-        top: 96%;
+        top: 98%;
         right: 0px;
         transform: translateY(50%);
         display: flex;
@@ -2042,6 +2075,7 @@ ul li.morado-circle::marker {
     .mensaje-final h2{
         font-size: 50px;
         width: 100%;
+        margin-top: 90px;
     }
     .header-img {
         width: 390px;
@@ -2055,6 +2089,19 @@ ul li.morado-circle::marker {
     }
     .texto-largo-cuatro p{
         text-align: center;
+    }
+    .video-modal-content{
+        width: 100%;
+    }
+    .news-home{
+        height: auto !important;
+    }
+    .cards-historias{
+        column-gap: 115px;
+    }
+    .card-experto{
+        width: 100%;
+        height: auto;
     }
 }
 

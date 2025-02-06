@@ -1,11 +1,13 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre = htmlspecialchars($_POST['nombreAlias']);
     $edad = htmlspecialchars($_POST['edad']);
     $correo = htmlspecialchars($_POST['correo']);
-    $mensaje = nl2br(htmlspecialchars($_POST['mensaje'])); // nl2br para respetar saltos de l¨ªnea
+    $mensaje = nl2br(htmlspecialchars($_POST['mensaje'])); 
 
-    $to = "roberto@bespokeadvertising.com.mx"; 
+    $to = "haizel@bespokeadvertising.com.mx"; 
     $subject = "Nueva pregunta";
 
     // Contenido del correo en HTML
@@ -60,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <body>
                 <div class='email-container'>
                     <div class='header'>
-                        <img src='https://bespokeadvertising.com.mx/exoron/assets/images/LOGOCLUB.webp' alt='Eroxon Logo'>
+                        <img src='https://bespokeadvertising.com.mx/eroxon/assets/images/LOGOCLUB.webp' alt='Eroxon Logo'>
                         <h1>Nueva Pregunta Recibida</h1>
                     </div>
                     <div class='content'>
@@ -78,17 +80,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </html>
     ";
 
-    // Encabezados
     $headers = "From: $correo\r\n";
     $headers .= "Reply-To: $correo\r\n";
-    $headers .= "CC: hola@bespokeadvertising.com.mx\r\n"; // Copia visible
-    $headers .= "BCC: hola@bespokeadvertising.com.mx\r\n"; // Copia oculta
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    // Enviar el correo
     if (mail($to, $subject, $body, $headers)) {
-        echo json_encode(["status" => "success", "message" => "Correo enviado correctamente."]);
+        echo json_encode(["status" => "success", "message" => "Muchas gracias por tu pregunta, te estaremos respondiendo a la brevedad de manera directa y en nuestras redes sociales."]);
     } else {
         echo json_encode(["status" => "error", "message" => "Error al enviar el correo."]);
     }

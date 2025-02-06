@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Guardar en base de datos (opcional)
     $host = "localhost";
-    $db = "eroxon";
+    $db = "faqs";
     $user = "root";
     $pass = "";
 

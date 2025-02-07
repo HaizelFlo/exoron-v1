@@ -108,9 +108,7 @@ a.nav-link {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    margin: 35px 25px;
 }
 
 .txt-slide-exoron-2 {
@@ -238,13 +236,11 @@ a.nav-link {
 /* Footer personalizado */
 .custom-footer {
     background: linear-gradient(to bottom, #0052A6, #003B75);
-    /* Degradado azul */
     color: white;
     font-family: Arial, sans-serif;
     font-size: 12px;
     padding: 15px 40px;
     border-top: 1px solid #FFF;
-    margin-top: 85px;
 }
 
 .footer-container {
@@ -402,6 +398,7 @@ a.nav-link {
 /* Estilos generales */
 .preguntale-experto {
     color: white;
+    margin-bottom: 5rem;
 }
 
 /* Títulos */
@@ -451,12 +448,11 @@ a.nav-link {
 }
 
 .descripcion {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
     color: #FFF;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -548,14 +544,13 @@ form .btn-enviar:hover {
     /* text-decoration: none; */
     color: #FFF;
     font-family: Montserrat;
-    font-size: 11px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     /* text-align: right; */
     float: right;
-    margin: -19px 0px 15px 0;
-    margin-bottom: 6px;
+    margin: 0 0px 8px 0;
 }
 
 /* .btn-leer:hover {
@@ -580,17 +575,17 @@ em {
     width: 25px;
     height: 25px;
     z-index: 111;
-    margin-left: 133px;
+    margin-left: 120px;
 }
 
 /* Ondas expansivas */
 .animated-container::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -1px;
-    width: 30%;
-    height: 100%;
+    top: -4px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: rgba(0, 173, 238, 0.5);
     /* Color azul semitransparente */
@@ -706,13 +701,6 @@ form .form-control-m {
 .text-form p{
     font-size: 11px;
     color: #00ADEE;
-}
-
-.div-leyenda{
-    position: absolute;
-    width: 30%;
-    margin-top: 75px;
-    margin-left: 15px;
 }
 
 .titulo-episodios::after {
@@ -1788,11 +1776,15 @@ ul li.morado-circle::marker {
 
 .header-index{
     position: fixed;
-    background-color: rgb(0 0 0);
+    background-color: rgb(0 1 11);
     margin-top: 85px;
     margin-bottom: 10px;
     z-index: 9999;
     margin-left: -13px;
+}
+
+svg.flecha {
+    width: 30px;
 }
 
 /* Small devices (landscape phones, 576px and up)*/
@@ -1827,10 +1819,6 @@ ul li.morado-circle::marker {
         width: 100%;
         z-index: 999;
 
-    }
-
-    .carousel-inner {
-        height: 805px;
     }
 
     .carousel-item img {
@@ -1882,7 +1870,7 @@ ul li.morado-circle::marker {
         display: flex;
         flex-direction: row;
         left: 0;
-        margin: 42px 0;
+        margin: 10px 0;
         gap: 15px;
         /* transform: rotate(90deg); */
     }
@@ -1896,6 +1884,8 @@ ul li.morado-circle::marker {
         font-size: 16px;
         left: 0;
         top: 60px;
+        position: static;
+        margin-top: 15px;
     }
 
     .leyenda.dos {
@@ -1963,15 +1953,19 @@ ul li.morado-circle::marker {
 
     .card-experto {
         width: 100%;
-        height: 535px;
+        height: auto;
     }
 
     .card-experto .contenido {
         font-size: 15px;
     }
 
+    .h-parrafo {
+        height: auto;
+    }
+
     .btn-leer {
-        margin-top: -33px;
+        font-size: 16px;
     }
 
     .animated-container {
@@ -2108,7 +2102,7 @@ ul li.morado-circle::marker {
 
     .news-home {
         height: auto;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .news-home h3 {
@@ -2142,17 +2136,40 @@ ul li.morado-circle::marker {
 
     .link-card {
         width: 50%;
+        margin-left: 215px;
+        margin-top: 0;
+    }
+
+    svg.flecha {
+        width: 30px;
     }
 
     .img-club {
-        width: 177px;
-        margin-left: 0px;
+        width: 160px;
         margin-bottom: 25px;
-        margin-top: 0px;
+        margin-top: -45px;
+        left: -30%;
     }
     .div-leyenda{
         width: 65%;
         margin-top: 21px;
+    }
+
+    .preguntale-experto {
+        margin-bottom: 4.3rem;
+    }
+    .contenedor-info {
+        margin-left: 15px;
+    }
+    .episodio-info {
+        font-size: 15px;
+    }
+
+    .descripcion-episodio {
+        font-size: 15px;
+    }
+    .muy-pronto {
+        font-size: 15px;
     }
 }
 
@@ -2169,10 +2186,6 @@ ul li.morado-circle::marker {
         margin-top: 78px;
     }
 
-    .carousel-inner {
-        height: 1300px;
-    }
-
     .content {
         bottom: 0;
         left: 0;
@@ -2181,8 +2194,9 @@ ul li.morado-circle::marker {
 
     .txt-slide-exoron-1 {
         left: 0;
-        top: 225px;
+        top: 0px;
         font-size: 33px;
+        position: static;
     }
     .contenedor-news{
         justify-items: center;
@@ -2193,7 +2207,9 @@ ul li.morado-circle::marker {
         left: 15px;
         bottom: -40%;
     }
-
+    a.nav-link {
+        font-size: 18px;
+    }
     .custom-indicators {
         position: absolute;
         top: 100%;
@@ -2209,9 +2225,9 @@ ul li.morado-circle::marker {
     }
 
     .logo-exo {
-        position: relative;
+        position: static;
         left: 0;
-        top: 240px;
+        top: 0px;
         padding: 15px 0;
         width: 205px !important;
     }
@@ -2222,6 +2238,7 @@ ul li.morado-circle::marker {
         top: 240px;
         width: auto;
         height: auto;
+        position: static;
     }
 
     .leyenda {
@@ -2246,6 +2263,7 @@ ul li.morado-circle::marker {
 
     .carousel-item .content {
         padding: 0 1rem;
+        position: static;
     }
 
     .txt-slide-exoron {
@@ -2253,7 +2271,8 @@ ul li.morado-circle::marker {
         width: auto;
         height: auto;
         left: 0;
-        top: 232px;
+        top: 0px;
+        position: static;
     }
 
     .scroll-tarjetas {
@@ -2354,8 +2373,13 @@ ul li.morado-circle::marker {
         width: 100%;
         height: auto;
     }
-    .img-club{
-        margin-top: 20px;
+    .img-club {
+        margin-top: -50px;
+        margin-bottom: 30px;
+        left: -36%;
+    }
+    .text-form {
+        margin-bottom: 45px;
     }
 }
 

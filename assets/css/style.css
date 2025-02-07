@@ -244,7 +244,7 @@ a.nav-link {
     font-size: 12px;
     padding: 15px 40px;
     border-top: 1px solid #FFF;
-    margin-top: 40px;
+    margin-top: 85px;
 }
 
 .footer-container {
@@ -696,10 +696,23 @@ form .form-control-m {
 }
 
 .img-club {
-    width: 300px;
-    margin-left: 40px;
-    margin-bottom: 5px;
-    margin-top: -150px;
+    width: 210px;
+    margin-top: -100px;
+    position: relative;
+    left: -21%;
+    margin-bottom: 15px;
+}
+
+.text-form p{
+    font-size: 11px;
+    color: #00ADEE;
+}
+
+.div-leyenda{
+    position: absolute;
+    width: 30%;
+    margin-top: 75px;
+    margin-left: 15px;
 }
 
 .titulo-episodios::after {
@@ -1763,6 +1776,24 @@ ul li.morado-circle::marker {
 .contenedor-news{
     justify-items: auto;
 }
+.seccion-formulario{
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding: 30px;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-index{
+    position: fixed;
+    background-color: rgb(0 0 0);
+    margin-top: 85px;
+    margin-bottom: 10px;
+    z-index: 9999;
+    margin-left: -13px;
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 575px) {
@@ -1774,6 +1805,14 @@ ul li.morado-circle::marker {
     .footer-social i {
         font-size: 23px;
         margin-right: 5px;
+    }
+
+    .seccion-formulario{
+        height: auto;
+        width: auto;
+        /* margin: auto; */
+        padding: 20px;
+        margin-bottom: -35px;
     }
 
     .navbar-collapse {
@@ -1791,7 +1830,7 @@ ul li.morado-circle::marker {
     }
 
     .carousel-inner {
-        height: 1068px;
+        height: 805px;
     }
 
     .carousel-item img {
@@ -2111,8 +2150,9 @@ ul li.morado-circle::marker {
         margin-bottom: 25px;
         margin-top: 0px;
     }
-    .hr-episodios{
-        opacity: .0;
+    .div-leyenda{
+        width: 65%;
+        margin-top: 21px;
     }
 }
 
@@ -2121,8 +2161,16 @@ ul li.morado-circle::marker {
         width: 100%;
     }
 
+    .seccion-formulario{
+        margin-bottom: 30px;
+    }
+
+    .header-index{
+        margin-top: 78px;
+    }
+
     .carousel-inner {
-        height: 1400px;
+        height: 1300px;
     }
 
     .content {
@@ -2178,8 +2226,18 @@ ul li.morado-circle::marker {
 
     .leyenda {
         font-size: 10px;
-        /* left: 15px;*/
-        bottom: -330px;
+    }
+
+    .div-leyenda{
+        margin-top: 90px;
+        width: 42%;
+    }
+    .div-leyenda p{
+        padding-left: 20px;
+    }
+
+    .custom-footer{
+        margin-top: 105px;
     }
 
     .m-leyenda{

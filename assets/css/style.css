@@ -698,7 +698,7 @@ form .form-control-m {
     margin-bottom: 15px;
 }
 
-.text-form p{
+.text-form p {
     font-size: 11px;
     color: #00ADEE;
 }
@@ -1761,10 +1761,12 @@ ul li.morado-circle::marker {
 .link :hover {
     text-decoration: underline;
 }
-.contenedor-news{
+
+.contenedor-news {
     justify-items: auto;
 }
-.seccion-formulario{
+
+.seccion-formulario {
     height: auto;
     width: auto;
     margin: auto;
@@ -1774,7 +1776,7 @@ ul li.morado-circle::marker {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.header-index{
+.header-index {
     position: fixed;
     background-color: rgb(0 1 11);
     margin-top: 85px;
@@ -1799,7 +1801,7 @@ svg.flecha {
         margin-right: 5px;
     }
 
-    .seccion-formulario{
+    .seccion-formulario {
         height: auto;
         width: auto;
         /* margin: auto; */
@@ -2098,6 +2100,11 @@ svg.flecha {
 
     .texto-largo-cuatro p {
         text-align: center;
+        font-size: 15px;
+    }
+
+    .texto-largo {
+        font-size: 15px;
     }
 
     .news-home {
@@ -2136,7 +2143,7 @@ svg.flecha {
 
     .link-card {
         width: 50%;
-        margin-left: 215px;
+        margin-left: 164px;
         margin-top: 0;
     }
 
@@ -2150,7 +2157,8 @@ svg.flecha {
         margin-top: -45px;
         left: -30%;
     }
-    .div-leyenda{
+
+    .div-leyenda {
         width: 65%;
         margin-top: 21px;
     }
@@ -2158,9 +2166,11 @@ svg.flecha {
     .preguntale-experto {
         margin-bottom: 4.3rem;
     }
+
     .contenedor-info {
         margin-left: 15px;
     }
+
     .episodio-info {
         font-size: 15px;
     }
@@ -2168,6 +2178,7 @@ svg.flecha {
     .descripcion-episodio {
         font-size: 15px;
     }
+
     .muy-pronto {
         font-size: 15px;
     }
@@ -2178,11 +2189,11 @@ svg.flecha {
         width: 100%;
     }
 
-    .seccion-formulario{
+    .seccion-formulario {
         margin-bottom: 30px;
     }
 
-    .header-index{
+    .header-index {
         margin-top: 78px;
     }
 
@@ -2198,7 +2209,8 @@ svg.flecha {
         font-size: 33px;
         position: static;
     }
-    .contenedor-news{
+
+    .contenedor-news {
         justify-items: center;
     }
 
@@ -2207,9 +2219,11 @@ svg.flecha {
         left: 15px;
         bottom: -40%;
     }
+
     a.nav-link {
         font-size: 18px;
     }
+
     .custom-indicators {
         position: absolute;
         top: 100%;
@@ -2245,19 +2259,20 @@ svg.flecha {
         font-size: 10px;
     }
 
-    .div-leyenda{
+    .div-leyenda {
         margin-top: 90px;
         width: 42%;
     }
-    .div-leyenda p{
+
+    .div-leyenda p {
         padding-left: 20px;
     }
 
-    .custom-footer{
+    .custom-footer {
         margin-top: 105px;
     }
 
-    .m-leyenda{
+    .m-leyenda {
         margin-bottom: 243px;
     }
 
@@ -2373,11 +2388,13 @@ svg.flecha {
         width: 100%;
         height: auto;
     }
+
     .img-club {
         margin-top: -50px;
         margin-bottom: 30px;
         left: -36%;
     }
+
     .text-form {
         margin-bottom: 45px;
     }

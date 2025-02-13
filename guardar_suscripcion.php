@@ -1,27 +1,30 @@
 <?php
 
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
 
-    // Validar que el correo sea válido
     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         echo json_encode(["status" => "error", "message" => "Correo inválido."]);
         exit;
     }
 
-    // Guardar en base de datos (opcional)
+    // Conexión a la base de datos
     $host = "localhost";
-    $db = "faqs";
-    $user = "root";
-    $pass = "";
+    $db = "news";
+    $user = "devbespoke";
+    $pass = "admin_bespoke";
 
     try {
-        // Conectar a la base de datos
-        $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+        $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Verificar si el correo ya existe
-        $query = $conn->prepare("SELECT id FROM suscripciones WHERE correo = :correo");
+        // Verifica si el correo ya existe
+        $query = $conn->prepare("SELECT id FROM newsletter WHERE correo = :correo");
         $query->bindParam(":correo", $correo);
         $query->execute();
 
@@ -30,33 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         }
 
-        // Insertar el correo
-        $insert = $conn->prepare("INSERT INTO suscripciones (correo) VALUES (:correo)");
+        // Insertar el correo con estado "pendiente"
+        $insert = $conn->prepare("INSERT INTO newsletter (correo, status) VALUES (:correo, 'pendiente')");
         $insert->bindParam(":correo", $correo);
         $insert->execute();
 
-        // Leer el contenido de `cupon.html`
-        $cuponPath = __DIR__ . "/cupon.html"; // Asegúrate de que `cupon.html` esté en el mismo directorio
-        if (!file_exists($cuponPath)) {
-            echo json_encode(["status" => "error", "message" => "No se pudo encontrar el archivo del cupón."]);
-            exit;
-        }
-
-        $cuponHtml = file_get_contents($cuponPath);
-
-        // Configuración del correo
-        $to = $correo;
-        $subject = "¡Gracias por suscribirte! Aquí está tu cupón";
-        $headers = "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-        $headers .= "From: no-reply@localhost\r\n";
-
-        // Enviar el correo
-        if (mail($to, $subject, $cuponHtml, $headers)) {
-            echo json_encode(["status" => "success", "message" => "¡Gracias por suscribirte! Revisa tu correo para descargar tu cupón."]);
-        } else {
-            echo json_encode(["status" => "error", "message" => "No se pudo enviar el correo."]);
-        }
+        echo json_encode(["status" => "success", "message" => "Correo guardado correctamente. Se enviará pronto."]);
     } catch (PDOException $e) {
         echo json_encode(["status" => "error", "message" => "Error en la base de datos: " . $e->getMessage()]);
     }

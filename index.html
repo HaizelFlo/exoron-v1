@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid header-index">
           <a class="navbar-brand" href="#">
-            <img src="assets/images/LOGOCLUB.webp" alt="Logo" height="auto" />
+            <img src="assets/images/LOGOCLUB.png" alt="Logo" height="68px" />
           </a>
           <button
             class="navbar-toggler"
@@ -493,7 +493,7 @@
                 <div class="txt-slide-exoron-2">
                   <p>
                     La confianza es clave para una vida sexual equilibrada. Se
-                    trata de comodidad con uno mismo y la pareja. Eroxon® ayuda
+                    trata de comodidad con uno mismo y la pareja. EROXON<sup>®</sup> ayuda
                     a recuperar esa confianza ante la disfunción eréctil; no
                     obstante, es vital un diálogo abierto sobre la sexualidad
                     masculina.
@@ -517,7 +517,7 @@
                 <div class="txt-slide-exoron">
                   <p>
                     La vitalidad sexual refleja bienestar y conexión con la
-                    masculinidad. Implica energía y pasión compartida. Eroxon®
+                    masculinidad. Implica energía y pasión compartida. EROXON<sup>®</sup>
                     puede ayudar a enfrentar la disfunción eréctil y reavivar
                     esa energía, pero la verdadera vitalidad proviene de un
                     enfoque que permita a los hombres explorar su sexualidad sin
@@ -544,7 +544,7 @@
                   <p>
                     La seguridad del hombre se mide por la capacidad de vivir
                     plenamente y afrontar desafíos como la disfunción eréctil.
-                    Eroxon® puede apoyar, pero es mediante la seguridad interior
+                    EROXON<sup>®</sup> puede apoyar, pero es mediante la seguridad interior
                     que logrará una sexualidad auténtica y un bienestar
                     integral.
                   </p>
@@ -576,12 +576,14 @@
               <div class="d-md-flex align-items-center gap-3">
                 <input type="email" id="emailInputNews" placeholder="Tu correo electrónico" />
                 <div class="text-center">
-                  <button type="submit">Suscribirse</button>
+                  <button type="submit" id="btnSuscribirse">Suscribirse</button>
                 </div>
               </div>
             </form>
             <div id="errorMessageNews" class="mensaje-success" style="color: red; font-size: 0.9rem; margin-bottom: 8px"></div>
-            <div id="successMessageNews" class="mensaje-success" style="color: #00adee; font-size: 0.9rem; margin-bottom: 8px">
+            <div id="successMessageNews" class="mensaje-success" style="color: #00adee; font-size: 0.9rem; margin-bottom: 8px"></div>
+            <div id="spinner" class="d-none spinner-content">
+              <img src="assets/images/spiner.gif" alt="spinner" class="spinner">
             </div>
           </div>
         </div>
@@ -598,7 +600,7 @@
             
                     <div class="col-lg-8 text-sobre-club">
                       <p>
-                        En Club eroxon®,
+                        En Club EROXON<sup>®</sup>,
                         <span class="fw-bold">la salud sexual masculina es nuestra prioridad</span>. Aquí encontrarás información y
                         asesoría de expertos
                         para
@@ -659,7 +661,7 @@
     <section class="div-leyenda">
         <p class="leyenda d-block">
             <b>Consulte a su médico.</b><br />
-            Eroxon® es un dispositivo médico (No. Reg. 1887C2023 SSA)<br />
+            EROXON<sup>®</sup> es un dispositivo médico (No. Reg. 1887C2023 SSA)<br />
             Permiso de publicidad No.243300201B3690
         </p>
     </section>
@@ -715,10 +717,11 @@
 
         <!-- Sección derecha: Redes sociales -->
         <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"
+          <a href="https://www.facebook.com/ClubEroxonMx" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/cluberoxonmx?igsh=enJqYjE1M2doYm5p" target="_blank" aria-label="Instagram"
             ><i class="fab fa-instagram"></i
           ></a>
+          <a href="https://www.tiktok.com/@cluberoxonmx?_t=ZM-8thQPbe4M6v&_r=1" target="_blank" aria-label="Tik Tok"><i class="fa-brands fa-tiktok"></i></a>
           <div>
             <a href="#" class="privacy-link">Aviso de privacidad</a>
           </div>
@@ -764,31 +767,13 @@
           correo.
         </p>
         <form class="suscription">
-          <input
-            type="email"
-            id="emailInput"
-            placeholder="Tu correo electrónico"
-            required
-          />
-          <div
-            id="errorMessage"
-            style="
-              color: red;
-              font-size: 0.9rem;
-              margin-top: 5px;
-              margin-bottom: 8px;
-            "
-          ></div>
-          <div
-            id="successMessage"
-            style="
-              color: #00adee;
-              font-size: 0.9rem;
-              margin-top: 5px;
-              margin-bottom: 8px;
-            "
-          ></div>
-          <button type="submit">Suscribirse</button>
+          <input type="email" id="emailInput" placeholder="Tu correo electrónico" />
+          <div id="errorMessage" style="color: red; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
+          <div id="successMessage" style="color: #00adee; font-size: 0.9rem; margin-top: 5px; margin-bottom: 8px;"></div>
+          <div id="spinnerPopup" class="d-none spinner-popup">
+            <img src="assets/images/spiner.gif" alt="spiner">
+          </div>
+          <button type="submit" id="btnSuscribirsePopup">Suscribirse</button>
         </form>
       </div>
     </div>
@@ -852,16 +837,28 @@
 
                 const emailInput = document.getElementById("emailInput");
                 const errorMessage = document.getElementById("errorMessage");
-                const successMessage =
-                  document.getElementById("successMessage");
+                const successMessage = document.getElementById("successMessage");
                 const email = emailInput.value.trim();
+
+                const btn = document.getElementById('btnSuscribirsePopup');
+                const spinner = document.getElementById('spinnerPopup');
 
                 errorMessage.textContent = "";
                 successMessage.textContent = "";
 
+                btn.addEventListener("click", function(){
+                  btn.classList.add("deshabilitado");
+                  spinner.classList.replace("d-none", "d-block");
+                });
+
+                btn.setAttribute("disabled", "");
+
                 if (!email || !validateEmail(email)) {
-                  errorMessage.textContent =
-                    "Por favor, ingresa un correo válido.";
+                  errorMessage.textContent = "Por favor, ingresa un correo válido.";
+                  spinner.classList.replace("d-block", "d-none");
+                  btn.classList.remove("deshabilitado");
+                  btn.removeAttribute("disabled");
+                  console.log("entreeeeeeeee");
                   return;
                 }
 
@@ -875,6 +872,9 @@
                   .then((response) => {
                     if (!response.ok) {
                       throw new Error("Error en la respuesta del servidor");
+                      btn.removeAttribute("disabled");
+                      btn.classList.remove("deshabilitado");
+                      spinner.classList.replace("d-block", "d-none");
                     }
                     return response.json();
                   })
@@ -883,9 +883,15 @@
                       console.log("Éxito:", data.message);
                       successMessage.textContent = "Éxito: " + data.message;
                       emailInput.value = "";
+                      btn.removeAttribute("disabled");
+                      btn.classList.remove("deshabilitado");
+                      spinner.classList.replace("d-block", "d-none");
                     } else {
                       console.error("Error:", data.message);
                       errorMessage.textContent = "Error: " + data.message;
+                      btn.removeAttribute("disabled");
+                      btn.classList.remove("deshabilitado");
+                      spinner.classList.replace("d-block", "d-none");
                     }
                   })
                   .catch((error) => {
@@ -903,6 +909,7 @@
 
         // Función para suscripción
         function handleSubscriptionNews() {
+
           // Registrar el envío del formulario
           const form = document.querySelector("#subscribeModalNews form");
           if (form) {
@@ -911,16 +918,27 @@
 
               const emailInput = document.getElementById("emailInputNews");
               const errorMessage = document.getElementById("errorMessageNews");
-              const successMessage =
-                document.getElementById("successMessageNews");
+              const successMessage = document.getElementById("successMessageNews");
               const email = emailInput.value.trim();
+              const btn = document.getElementById('btnSuscribirse');
+              const spinner = document.getElementById('spinner');
 
               errorMessage.textContent = "";
               successMessage.textContent = "";
 
+              btn.addEventListener("click", function () {
+                btn.classList.add("deshabilitado");
+                spinner.classList.replace("d-none", "d-block");
+              });
+
+              btn.setAttribute("disabled", "");
+
               if (!email || !validateEmail(email)) {
                 errorMessage.textContent =
                   "Por favor, ingresa un correo válido.";
+                spinner.classList.replace("d-block", "d-none");
+                btn.classList.remove("deshabilitado");
+                btn.removeAttribute("disabled");
                 return;
               }
 
@@ -934,17 +952,28 @@
                 .then((response) => {
                   if (!response.ok) {
                     throw new Error("Error en la respuesta del servidor");
+                    spinner.classList.replace("d-block", "d-none");
+                    btn.classList.remove("deshabilitado");
+                    btn.removeAttribute("disabled");
                   }
                   return response.json();
                 })
                 .then((data) => {
+
                   if (data.status === "success") {
                     console.log("Éxito:", data.message);
                     successMessage.textContent = "Éxito: " + data.message;
                     emailInput.value = "";
+                    spinner.classList.replace("d-block", "d-none");
+                    btn.classList.remove("deshabilitado");
+                    btn.removeAttribute("disabled");
                   } else {
                     console.error("Error:", data.message);
                     errorMessage.textContent = "Error: " + data.message;
+
+                    spinner.classList.replace("d-block", "d-none");
+                    btn.classList.remove("deshabilitado");
+                    btn.removeAttribute("disabled");
                   }
                 })
                 .catch((error) => {

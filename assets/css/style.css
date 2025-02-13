@@ -30,12 +30,20 @@ body {
     background-color: #000009;
 }
 
+.bg-portada-tema {
+    background: url(../images/bg_problemas.png) no-repeat;
+    background-size: cover;
+    background-color: #06041b;
+    background-position: right center;
+}
+
 .video {
     background: url('../images/bg-video.webp') no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: right center;
     background-color: #010102;
+    margin-top: 250px;
 }
 
 header {
@@ -44,6 +52,10 @@ header {
 
 header .navbar {
     padding: 0rem 1rem;
+}
+
+.mt-header {
+    margin-top: 135px;
 }
 
 .carousel-item .content {
@@ -799,6 +811,7 @@ form .form-control-m {
 
 .video-img {
     width: 350px;
+    margin-top: -100px;
 }
 
 .titulo-episodios {
@@ -1316,7 +1329,6 @@ span.pregunta {
     background: #0D132E;
     color: #fff;
     box-shadow: 4px 6px 2px #000000a1;
-    height: 110px;
     text-align: start;
     display: grid;
     align-items: center;
@@ -1358,7 +1370,7 @@ span.pregunta {
     background: #22A6DE;
     border: none;
     padding: 10px 20px;
-    cursor: pointer !important;
+    cursor: pointer;
     border-radius: 5px;
     color: #FFF;
     font-family: Montserrat;
@@ -1404,7 +1416,7 @@ input:focus-visible {
     background: #22A6DE;
     border: none;
     padding: 10px 20px;
-    cursor: pointer !important;
+    cursor: pointer;
     border-radius: 5px;
     color: #FFF;
     font-family: Montserrat;
@@ -1699,6 +1711,7 @@ span.pregunta-tres {
     margin: 25px 2% 0px;
     text-align: center;
     width: 660px;
+    margin-bottom: 70px;
 }
 
 .contenedor-final-cuatro {
@@ -1775,16 +1788,41 @@ ul li.morado-circle::marker {
 }
 
 .header-index {
-    position: fixed;
     background-color: rgb(0 1 11);
-    margin-top: 85px;
-    margin-bottom: 10px;
-    z-index: 9999;
-    margin-left: -13px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
 }
 
 svg.flecha {
     width: 30px;
+}
+
+.deshabilitado {
+    opacity: 0.6;
+    border: 2px solid white;
+    cursor: not-allowed !important;
+    background-color: red;
+}
+
+.spinner-content{
+    position: absolute;
+    margin-top: -18px;
+    margin-left: 110px;
+    height: 25px;
+}
+
+.spinner {
+    position: relative;
+    top: -29px;
+}
+
+.spinner-popup {
+    position: absolute;
+    top: 140px;
+    left: 188px;
 }
 
 /* Small devices (landscape phones, 576px and up)*/
@@ -1982,7 +2020,7 @@ svg.flecha {
     .video-img {
         width: auto;
         padding: 0 25px 0 25px;
-        margin: 20px 0px -27px 0px;
+        margin: -120px 0px -27px 0px;
     }
 
     .mt-portada {
@@ -2091,7 +2129,7 @@ svg.flecha {
     }
 
     .mensaje-final-cuatro h2 {
-        font-size: 28px;
+        font-size: 25px;
         width: auto;
         margin: 28px 0px;
     }
@@ -2180,6 +2218,22 @@ svg.flecha {
     .muy-pronto {
         font-size: 15px;
     }
+
+    .spinner-popup {
+        top: 167px;
+        left: 115px;
+    }
+
+    .spinner-content {
+        left: 7px;
+        width: 100%;
+        margin: -85px 0px 0px 0px;
+        text-align: center;
+    }
+
+    .news-home button{
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -2191,14 +2245,17 @@ svg.flecha {
         margin-bottom: 30px;
     }
 
-    .header-index {
-        margin-top: 78px;
-    }
-
     .content {
         bottom: 0;
         left: 0;
         display: unset;
+    }
+
+    .spinner-content {
+        left: 0px;
+        width: 100%;
+        margin: -15px 0 0 0;
+        text-align: center;
     }
 
     .txt-slide-exoron-1 {
@@ -2300,7 +2357,7 @@ svg.flecha {
     .video-img {
         width: auto;
         padding: 0 110px 0 110px;
-        margin: 20px 0px -27px 0px;
+        margin: -165px 0px -27px 0px;
     }
 
     .mt-portada {

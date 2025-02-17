@@ -22,6 +22,44 @@ body {
     background-color: #000;
 }
 
+.home-lanzamiento {
+    background: url('../images/bg_lanzamiento.svg') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+}
+
+.contenedor-lanzamiento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mt-lanzamiento {
+    margin-top: 10%;
+}
+
+.subtitulo-lanzamiento {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 10.2px;
+    text-transform: uppercase;
+}
+
+.subtitulo-lanzamiento-dos {
+    color: #902F7F;
+    text-align: center;
+    font-family: "Silent Brush";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .experto {
     background: url(../images/bg-experto.webp) no-repeat;
     background-size: cover;
@@ -1807,7 +1845,7 @@ svg.flecha {
     background-color: red;
 }
 
-.spinner-content{
+.spinner-content {
     position: absolute;
     margin-top: -18px;
     margin-left: 110px;
@@ -2231,14 +2269,38 @@ svg.flecha {
         text-align: center;
     }
 
-    .news-home button{
+    .news-home button {
         margin-top: 10px;
+    }
+
+    .mt-lanzamiento {
+        margin-top: 4%;
+    }
+
+    .subtitulo-lanzamiento {
+        font-size: 22px;
+    }
+
+    .subtitulo-lanzamiento-dos {
+        font-size: 60px;
+    }
+
+    .home-lanzamiento {
+        background: url('../images/bg_lanzamiento_mobile.png') no-repeat center center;
+        background-size: cover;
+        background-color: #000;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .carousel-item img {
         width: 100%;
+    }
+
+    .home-lanzamiento {
+        background: url('../images/bg_lanzamiento_mobile.png') no-repeat center center;
+        background-size: cover;
+        background-color: #000;
     }
 
     .seccion-formulario {
@@ -2453,6 +2515,11 @@ svg.flecha {
     .text-form {
         margin-bottom: 45px;
     }
+
+    .mt-lanzamiento {
+        margin-top: -11%;
+    }
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/

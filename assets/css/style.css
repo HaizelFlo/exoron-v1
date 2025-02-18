@@ -28,6 +28,13 @@ body {
     background-color: #000;
 }
 
+.bg-pagina {
+    background: url('../images/bg_index.webp') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    height: 100vh;
+}
+
 .contenedor-lanzamiento {
     display: flex;
     justify-content: center;
@@ -36,7 +43,7 @@ body {
 }
 
 .mt-lanzamiento {
-    margin-top: 10%;
+    margin-top: 18%;
 }
 
 .subtitulo-lanzamiento {
@@ -58,6 +65,47 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.card-redes {
+    width: 40%;
+    background: #00A9F4;
+    border-radius: 5px;
+    margin: 10px auto;
+    height: 40px;
+    color: #fff;
+}
+
+.card-redes:hover {
+    background: #902F7F;
+}
+
+.h2-titulo {
+    color: #902F7F;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 10.2px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.card-redes a {
+    text-decoration: none;
+    margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+}
+
+.card-redes a:hover {
+    color: #00A9F4;
 }
 
 .experto {
@@ -2290,6 +2338,10 @@ svg.flecha {
         background-size: cover;
         background-color: #000;
     }
+
+    .card-redes {
+        width: 85%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -2325,6 +2377,10 @@ svg.flecha {
         top: 0px;
         font-size: 33px;
         position: static;
+    }
+
+    .card-redes {
+        width: 85%;
     }
 
     .contenedor-news {

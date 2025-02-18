@@ -128,7 +128,7 @@
                     </defs>
                   </svg>
                 </div>
-                <span class="me-3 text-white">Historias eroxon®</span>
+                <span class="me-3 text-white">Historias eroxon<sup>®</sup></span>
               </a>
             </li>
             <li class="nav-item">
@@ -522,167 +522,167 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-   
-       // Función para manejar el pop-up de cookies
-       function handleCookiesPopup() {
-           const cookieConsent = localStorage.getItem("cookieConsent");
-           const cookiePopup = document.getElementById("cookieConsent");
-   
-           if (!cookieConsent) {
-               cookiePopup.style.display = "block";
-           }
-   
-           // Botón de aceptar cookies
-           document.getElementById("acceptCookies")?.addEventListener("click", function () {
-               localStorage.setItem("cookieConsent", "accepted");
-               cookiePopup.style.display = "none";
-               console.log("Cookies aceptadas.");
-           });
-   
-           // Botón de rechazar cookies
-           document.getElementById("declineCookies")?.addEventListener("click", function () {
-               localStorage.setItem("cookieConsent", "declined");
-               cookiePopup.style.display = "none";
-               console.log("Cookies rechazadas.");
-           });
-       }
-   
-       // Función para manejar el pop-up de suscripción
-       function handleSubscriptionPopup() {
-           const subscriptionPopup = localStorage.getItem("subscriptionPopup");
-           const subscribeModal = document.getElementById("subscribeModal");
-   
-           if (!subscriptionPopup) {
-               setTimeout(() => {
-                   subscribeModal.style.display = "flex";
-               }, 2000);
-   
-               // Registrar el clic en el botón de cerrar
-               document.getElementById("closeModal")?.addEventListener("click", function () {
-                   subscribeModal.style.display = "none";
-                   localStorage.setItem("subscriptionPopup", "closed");
-               });
-   
-               // Registrar el envío del formulario de suscripción
-               const form = document.querySelector("#subscribeModal form");
-               if (form) {
-                   form.addEventListener("submit", function (e) {
-                       e.preventDefault();
-   
-                       const emailInput = document.getElementById("emailInput");
-                       const errorMessage = document.getElementById("errorMessage");
-                       const successMessage = document.getElementById("successMessage");
-                       const email = emailInput.value.trim();
-   
-                       errorMessage.textContent = "";
-                       successMessage.textContent = "";
-   
-                       if (!email || !validateEmail(email)) {
-                           errorMessage.textContent = "Por favor, ingresa un correo válido.";
-                           return;
-                       }
-   
-                       const formData = new FormData();
-                       formData.append("correo", email);
-   
-                       fetch("guardar_suscripcion.php", {
-                           method: "POST",
-                           body: formData,
-                       })
-                       .then(response => {
-                           if (!response.ok) {
-                               return response.text().then(text => { throw new Error(text); });
-                           }
-                           return response.json();
-                       })
-                       .then(data => {
-                           if (data.status === "success") {
-                               console.log("Correo registrado:", data.message);
-                               successMessage.textContent = "Tu correo ha sido registrado. El cupón se enviará pronto.";
-                               emailInput.value = "";
-                           } else {
-                               console.error("Error:", data.message);
-                               errorMessage.textContent = "Error: " + data.message;
-                           }
-                       })
-                       .catch(error => {
-                           console.error("Error en fetch:", error.message);
-                           errorMessage.textContent = "Error en la conexión con el servidor.";
-                       });
-                   });
-               }
-           } else {
-               if (subscribeModal) {
-                   subscribeModal.style.display = "none";
-               }
-           }
-       }
-   
-       // Función para manejar el pop-up de suscripción de noticias
-       function handleSubscriptionNews() {
-           const form = document.querySelector("#subscribeModalNews form");
-           if (form) {
-               form.addEventListener("submit", function (e) {
-                   e.preventDefault();
-   
-                   const emailInput = document.getElementById("emailInputNews");
-                   const errorMessage = document.getElementById("errorMessageNews");
-                   const successMessage = document.getElementById("successMessageNews");
-                   const email = emailInput.value.trim();
-   
-                   errorMessage.textContent = "";
-                   successMessage.textContent = "";
-   
-                   if (!email || !validateEmail(email)) {
-                       errorMessage.textContent = "Por favor, ingresa un correo válido.";
-                       return;
-                   }
-   
-                   const formData = new FormData();
-                   formData.append("correo", email);
-   
-                   fetch("guardar_suscripcion.php", { // Ahora solo guarda el correo
-                       method: "POST",
-                       body: formData,
-                   })
-                   .then(response => {
-                       if (!response.ok) {
-                           return response.text().then(text => { throw new Error(text); });
-                       }
-                       return response.json();
-                   })
-                   .then(data => {
-                       if (data.status === "success") {
-                           console.log("Correo registrado:", data.message);
-                           successMessage.textContent = "Tu correo ha sido registrado. El cupón se enviará pronto.";
-                           emailInput.value = "";
-                       } else {
-                           console.error("Error:", data.message);
-                           errorMessage.textContent = "Error: " + data.message;
-                       }
-                   })
-                   .catch(error => {
-                       console.error("Error en fetch:", error.message);
-                       errorMessage.textContent = "Error en la conexión con el servidor.";
-                   });
-               });
-           }
-       }
-   
-       // Función para validar correos electrónicos
-       function validateEmail(email) {
-           const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-           return regex.test(email);
-       }
-   
-       // Ejecutar las funciones
-       handleCookiesPopup();
-       handleSubscriptionPopup();
-       handleSubscriptionNews();
-   
-   });
 
-   </script>
+      // Función para manejar el pop-up de cookies
+      function handleCookiesPopup() {
+        const cookieConsent = localStorage.getItem("cookieConsent");
+        const cookiePopup = document.getElementById("cookieConsent");
+
+        if (!cookieConsent) {
+          cookiePopup.style.display = "block";
+        }
+
+        // Botón de aceptar cookies
+        document.getElementById("acceptCookies")?.addEventListener("click", function () {
+          localStorage.setItem("cookieConsent", "accepted");
+          cookiePopup.style.display = "none";
+          console.log("Cookies aceptadas.");
+        });
+
+        // Botón de rechazar cookies
+        document.getElementById("declineCookies")?.addEventListener("click", function () {
+          localStorage.setItem("cookieConsent", "declined");
+          cookiePopup.style.display = "none";
+          console.log("Cookies rechazadas.");
+        });
+      }
+
+      // Función para manejar el pop-up de suscripción
+      function handleSubscriptionPopup() {
+        const subscriptionPopup = localStorage.getItem("subscriptionPopup");
+        const subscribeModal = document.getElementById("subscribeModal");
+
+        if (!subscriptionPopup) {
+          setTimeout(() => {
+            subscribeModal.style.display = "flex";
+          }, 2000);
+
+          // Registrar el clic en el botón de cerrar
+          document.getElementById("closeModal")?.addEventListener("click", function () {
+            subscribeModal.style.display = "none";
+            localStorage.setItem("subscriptionPopup", "closed");
+          });
+
+          // Registrar el envío del formulario de suscripción
+          const form = document.querySelector("#subscribeModal form");
+          if (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              const emailInput = document.getElementById("emailInput");
+              const errorMessage = document.getElementById("errorMessage");
+              const successMessage = document.getElementById("successMessage");
+              const email = emailInput.value.trim();
+
+              errorMessage.textContent = "";
+              successMessage.textContent = "";
+
+              if (!email || !validateEmail(email)) {
+                errorMessage.textContent = "Por favor, ingresa un correo válido.";
+                return;
+              }
+
+              const formData = new FormData();
+              formData.append("correo", email);
+
+              fetch("guardar_suscripcion.php", {
+                method: "POST",
+                body: formData,
+              })
+                .then(response => {
+                  if (!response.ok) {
+                    return response.text().then(text => { throw new Error(text); });
+                  }
+                  return response.json();
+                })
+                .then(data => {
+                  if (data.status === "success") {
+                    console.log("Correo registrado:", data.message);
+                    successMessage.textContent = "Tu correo ha sido registrado. El cupón se enviará pronto.";
+                    emailInput.value = "";
+                  } else {
+                    console.error("Error:", data.message);
+                    errorMessage.textContent = "Error: " + data.message;
+                  }
+                })
+                .catch(error => {
+                  console.error("Error en fetch:", error.message);
+                  errorMessage.textContent = "Error en la conexión con el servidor.";
+                });
+            });
+          }
+        } else {
+          if (subscribeModal) {
+            subscribeModal.style.display = "none";
+          }
+        }
+      }
+
+      // Función para manejar el pop-up de suscripción de noticias
+      function handleSubscriptionNews() {
+        const form = document.querySelector("#subscribeModalNews form");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const emailInput = document.getElementById("emailInputNews");
+            const errorMessage = document.getElementById("errorMessageNews");
+            const successMessage = document.getElementById("successMessageNews");
+            const email = emailInput.value.trim();
+
+            errorMessage.textContent = "";
+            successMessage.textContent = "";
+
+            if (!email || !validateEmail(email)) {
+              errorMessage.textContent = "Por favor, ingresa un correo válido.";
+              return;
+            }
+
+            const formData = new FormData();
+            formData.append("correo", email);
+
+            fetch("guardar_suscripcion.php", { // Ahora solo guarda el correo
+              method: "POST",
+              body: formData,
+            })
+              .then(response => {
+                if (!response.ok) {
+                  return response.text().then(text => { throw new Error(text); });
+                }
+                return response.json();
+              })
+              .then(data => {
+                if (data.status === "success") {
+                  console.log("Correo registrado:", data.message);
+                  successMessage.textContent = "Tu correo ha sido registrado. El cupón se enviará pronto.";
+                  emailInput.value = "";
+                } else {
+                  console.error("Error:", data.message);
+                  errorMessage.textContent = "Error: " + data.message;
+                }
+              })
+              .catch(error => {
+                console.error("Error en fetch:", error.message);
+                errorMessage.textContent = "Error en la conexión con el servidor.";
+              });
+          });
+        }
+      }
+
+      // Función para validar correos electrónicos
+      function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+
+      // Ejecutar las funciones
+      handleCookiesPopup();
+      handleSubscriptionPopup();
+      handleSubscriptionNews();
+
+    });
+
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

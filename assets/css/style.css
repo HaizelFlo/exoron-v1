@@ -40,10 +40,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-bottom: 75px;
 }
 
 .mt-lanzamiento {
-    margin-top: 18%;
+    padding-top: 125px;
 }
 
 .subtitulo-lanzamiento {
@@ -72,8 +73,9 @@ body {
     background: #00A9F4;
     border-radius: 5px;
     margin: 10px auto;
-    height: 40px;
+    height: 45px;
     color: #fff;
+    text-decoration: none;
 }
 
 .card-redes:hover {
@@ -2322,7 +2324,7 @@ svg.flecha {
     }
 
     .mt-lanzamiento {
-        margin-top: 4%;
+        margin: 45px auto 0;
     }
 
     .subtitulo-lanzamiento {

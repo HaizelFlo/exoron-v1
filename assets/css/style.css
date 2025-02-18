@@ -73,9 +73,10 @@ body {
     background: #00A9F4;
     border-radius: 5px;
     margin: 10px auto;
-    height: 45px;
+    /* height: 45px; */
     color: #fff;
     text-decoration: none;
+    padding: 8px 0;
 }
 
 .card-redes:hover {
@@ -253,7 +254,7 @@ a.nav-link {
 .content {
     position: absolute;
     bottom: 10%;
-    /* Ajuste de posición */
+    /* Ajuste de posiciÃ³n */
     left: 10%;
     display: flex;
     align-items: center;
@@ -300,7 +301,7 @@ a.nav-link {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30px;
-    /* Tamaño fijo */
+    /* TamaÃ±o fijo */
     height: 30px;
     border-radius: 50%;
     border: 2px solid rgb(255 255 255 / 75%);
@@ -417,13 +418,13 @@ a.nav-link {
     position: absolute;
     left: 0;
     transition: transform 0.5s ease-in-out;
-    /* Animación suave */
+    /* AnimaciÃ³n suave */
 }
 
-/* Posición inicial */
+/* PosiciÃ³n inicial */
 .svg-blue {
     transform: translateY(0);
-    /* Azul en posición inicial */
+    /* Azul en posiciÃ³n inicial */
     z-index: 2;
     /* Encima */
 }
@@ -436,7 +437,7 @@ a.nav-link {
     z-index: 1;
 }
 
-/* Animación al hacer clic */
+/* AnimaciÃ³n al hacer clic */
 .svg-blue.active {
     transform: translateY(-5px);
     /* Azul sube ligeramente */
@@ -444,7 +445,7 @@ a.nav-link {
 
 .svg-purple.active {
     transform: translate(-18px, 7px);
-    /* Morado se desplaza a la posición */
+    /* Morado se desplaza a la posiciÃ³n */
     opacity: 1;
     /* Aparece */
 }
@@ -463,7 +464,7 @@ a.nav-link {
 }
 
 
-/* Contenedor del título */
+/* Contenedor del tÃ­tulo */
 .titulo-sobre-club-container {
     padding: 1rem 1.5rem;
 }
@@ -501,7 +502,7 @@ a.nav-link {
     margin-bottom: 5rem;
 }
 
-/* Títulos */
+/* TÃ­tulos */
 .titulo-principal {
     color: #FFF;
     font-family: Montserrat;
@@ -722,7 +723,7 @@ em {
     border-radius: 10px;
     /* Bordes redondeados */
     min-height: 50px;
-    /* Altura mínima de la barra */
+    /* Altura mÃ­nima de la barra */
     height: 30px;
     /* Altura efectiva */
 }
@@ -1013,7 +1014,7 @@ form .form-control-m {
     color: #00ADEE;
     /* Azul claro para el texto */
     border-bottom: 3px solid #902F7F;
-    /* Línea morada */
+    /* LÃ­nea morada */
 
     border-top: transparent;
     border-left: transparent;
@@ -1035,7 +1036,7 @@ form .form-control-m {
     text-align: justify;
 }
 
-/* Animación para el contenido desplegado */
+/* AnimaciÃ³n para el contenido desplegado */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1048,7 +1049,7 @@ form .form-control-m {
     }
 }
 
-/* Ícono rotado cuando está activo */
+/* Ãcono rotado cuando estÃ¡ activo */
 .icon {
     transition: transform 0.3s ease;
 }
@@ -1385,7 +1386,7 @@ span.pregunta {
     margin: auto;
 }
 
-/* Estilo para el modal de suscripción */
+/* Estilo para el modal de suscripciÃ³n */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -2342,7 +2343,7 @@ svg.flecha {
     }
 
     .card-redes {
-        width: 85%;
+        width: 75%;
     }
 }
 

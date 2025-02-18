@@ -44,7 +44,7 @@ body {
 }
 
 .mt-lanzamiento {
-    padding-top: 125px;
+    margin-top: 18%;
 }
 
 .subtitulo-lanzamiento {
@@ -2576,7 +2576,7 @@ svg.flecha {
     }
 
     .mt-lanzamiento {
-        margin-top: -11%;
+        margin-top: -20%;
     }
 
 }

@@ -44,7 +44,7 @@ body {
 }
 
 .mt-lanzamiento {
-    margin-top: 18%;
+    margin-top: 20%;
 }
 
 .subtitulo-lanzamiento {
@@ -66,6 +66,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: -0.5rem;
 }
 
 .card-redes {
